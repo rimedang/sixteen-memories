@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}열여섯, 우리 동네{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="{{ url_for('index') }}" class="logo">
+        <span class="logo-mark">16</span>
+        <span>열여섯, 우리 동네</span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ url_for('index') }}#how">서비스 소개</a>
+        <a href="{{ url_for('index') }}#regions">지원 지역</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-title">열여섯, 우리 동네</p>
+      <p>지역 추억은 블로그 언급 분석과 기사 확인으로, 전국 유행은 연간 차트·흥행 기록을 참고해 개발자가 직접 선정한 자료입니다.</p>
+      <p class="footer-meta">지원 지역 선정: 행정안전부 주민등록 인구통계 (2016년 12월, 15~19세 거주자)</p>
+      <p class="footer-meta">영화·TV방송 포스터 제공: TMDB (The Movie Database) — This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+      <p class="footer-meta">게임 표지 제공: IGDB.com · 앨범 커버 제공: Apple Music (iTunes Search API)</p>
+    </div>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

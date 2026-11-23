@@ -92,10 +92,9 @@ python app.py
 예: 부평구 + 2002년생 → `/result?region=incheon-bupyeong&year=2018`
 
 ### 실행 화면
-<!-- [직접 수행] 스크린샷을 docs/screenshots/ 에 저장한 뒤 아래 경로를 맞춰 주세요. -->
-| 입력 화면 | 결과 화면 | 댓글 |
-|---|---|---|
-| ![입력](docs/screenshots/index.png) | ![결과](docs/screenshots/result.png) | ![댓글](docs/screenshots/comment.png) |
+| 입력 화면 | 결과 화면 | 댓글 | 휴대폰 화면 |
+|---|---|---|---|
+| ![입력](docs/screenshots/index.jpg) | ![결과](docs/screenshots/result.jpg) | ![댓글](docs/screenshots/comment.jpg) | ![모바일](docs/screenshots/mobile.jpg) |
 
 ---
 
@@ -106,7 +105,7 @@ python -m pytest -v
 ```
 
 - 테스트는 임시 DB와 `tests/fixtures/` 의 테스트용 CSV를 사용하므로 `instance/app.db` 를 건드리지 않습니다.
-- 현재 결과: **79 passed** (`tests/test_validators.py`, `tests/test_app.py`, `tests/test_tmdb_posters.py`)
+- 현재 결과: **93 passed** (`tests/test_validators.py`, `tests/test_app.py`, `tests/test_tmdb_posters.py`, 2026-11-23 확인)
 
 ### 주요 테스트 (계획서 검증 기준 → 테스트)
 | 계획서 검증 기준 | 테스트 |
@@ -123,6 +122,9 @@ python -m pytest -v
 | `<script>` 댓글이 글자 그대로 저장·표시 | `test_script_comment_is_stored_as_plain_text` |
 | 공유 링크 → 탐색 연도·경과 연수 표시 | `test_share_link_shows_target_year_and_years_ago` |
 | 해당 연도 전국 유행만 표시 | `test_trends_of_target_year_only` |
+| 검색 결과와 공유 링크 화면이 같음 | `test_share_link_opens_same_result_as_search` |
+| 잘못된 URL 파라미터(연도 범위 밖·문자·빠짐) → 안내 | `test_share_link_with_bad_year_shows_notice`, `test_share_link_with_missing_params_shows_notice` |
+| 잘못된 형식의 댓글 요청(목록 본문·숫자 닉네임) → 500 대신 400 | `test_comment_api_rejects_malformed_body`, `test_comment_with_non_text_values_is_rejected` |
 
 <!-- [직접 수행] pytest 실행 화면 스크린샷 또는 로그를 기말보고서에 첨부 -->
 
@@ -204,7 +206,7 @@ docs/             계획 변경·디버깅·리팩토링·설문·지역 선정�
   근거가 부족한 추측은 사용자 설문으로 검증할 가설로 분리했습니다.
 - **구현**: <!-- [직접 작성] 예: 주석 프롬프트로 validate_comment 초안을 받고 테스트로 검증·수정한 사례 -->
 
-### 디버깅 (전체 13건: [`docs/debugging.md`](docs/debugging.md))
+### 디버깅 (전체 17건: [`docs/debugging.md`](docs/debugging.md))
 - **템플릿 자동 정렬 오류**: 메인 화면에서 `TemplateSyntaxError`가 나고 테스트 4개가 실패했습니다.
   VSCode의 HTML 자동 정렬이 Jinja 문법 `{% if … %}`를 HTML 속성으로 잘못 바꾼 것이 원인이었습니다.
   원래 문법으로 복구하고 `.prettierignore`에 `templates/`를 추가해 재발을 막았습니다.
@@ -212,6 +214,10 @@ docs/             계획 변경·디버깅·리팩토링·설문·지역 선정�
   정규식의 `\b`가 파일에 저장되는 과정에서 백스페이스 문자로 바뀌어 있었습니다. `cat -A`로 확인한 뒤 고쳤습니다.
 - **CSV에서 지운 행이 DB에 남는 문제**: `INSERT OR REPLACE`는 사라진 행을 지우지 않아서,
   댓글이 연결되지 않는 전국 유행은 적재할 때마다 테이블을 새로 만들도록 바꿨습니다.
+
+### AI 도구 사용 구분
+- **GitHub Copilot** (자동완성·Chat): <!-- [직접 작성] Copilot으로 한 작업 -->
+- **Claude Code**: <!-- [직접 작성] Claude Code로 한 작업 --> 2026-11-23 최종 점검(예외 입력 점검, 디버깅 14~17번 수정, 테스트 7개 추가, 리팩토링 3번)은 Claude Code로 진행했습니다. <!-- [직접 수행] 변경 내용을 검토한 뒤 이 주석을 지우세요 -->
 
 ### 코드 리뷰 반영
 <!-- [직접 작성] Copilot Chat 코드 리뷰에서 지적받아 고친 사례 1~2개 -->
@@ -223,6 +229,8 @@ docs/             계획 변경·디버깅·리팩토링·설문·지역 선정�
 - **후**: 공통 기능을 `tools/common.py`로 분리했습니다. 연도 비교는 "연도를 꺼내는 함수"를 인자로 받는
   `choose_closest_year(candidates, year, year_of)`로 바꿔 TMDB·IGDB·iTunes 도구가 함께 씁니다.
 - **검증**: 리팩토링 전후로 같은 테스트가 통과하는지 확인했습니다.
+- **결과 화면 JS 요청 처리**: 소감 목록 불러오기·저장이 각자 `fetch`를 처리하고 실패를 처리하지 않아, 서버가 꺼지면 안내 없이 빈 화면이었습니다.
+  `requestJson()` 하나로 모으고 "서버에 연결하지 못했어요" 같은 안내를 보여주도록 바꿨습니다. (리팩토링 기록 3번)
 - 그 밖에 숫자 설정값(연도 범위, 댓글 길이, 분류)을 `config.py`에, 입력 검증을 `validators.py`에 모아 한 곳만 고치면 되도록 했습니다.
 
 ---

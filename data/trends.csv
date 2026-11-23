@@ -1,0 +1,215 @@
+﻿id,year,category,title,description,source_title,source_url,image_file,image_source,search_title
+2013-movie-1,2013,영화,7번방의 선물,,,,trends/2013/2013-movie-1.jpg,TMDB,
+2013-movie-2,2013,영화,변호인,,,,trends/2013/2013-movie-2.jpg,TMDB,
+2013-movie-3,2013,영화,설국열차,,,,trends/2013/2013-movie-3.jpg,TMDB,
+2013-movie-4,2013,영화,관상,,,,trends/2013/2013-movie-4.jpg,TMDB,
+2013-movie-5,2013,영화,아이언맨 3,,,,trends/2013/2013-movie-5.jpg,TMDB,
+2013-tv-1,2013,TV방송,꽃보다 할배,,,,trends/2013/2013-tv-1.jpg,TMDB,
+2013-tv-2,2013,TV방송,너의 목소리가 들려,,,,trends/2013/2013-tv-2.jpg,TMDB,
+2013-tv-3,2013,TV방송,굿닥터,,,,trends/2013/2013-tv-3.jpg,TMDB,
+2013-tv-4,2013,TV방송,주군의 태양,,,,trends/2013/2013-tv-4.jpg,TMDB,
+2013-tv-6,2013,TV방송,상속자들,,,,trends/2013/2013-tv-6.jpg,TMDB,
+2013-game-1,2013,앱·게임,몬스터 길들이기 for Kakao,"2013년 8월 출시 후 모바일 캐주얼 RPG 열풍을 이끌며 매출 상위권을 오래 지켰고, 2013 대한민국 게임대상 최우수상을 받았어요.",,,,,
+2013-game-2,2013,앱·게임,모두의마블 for Kakao,실시간 4인 대전 보드게임으로 큰 인기를 끌며 오랫동안 매출 상위권에 머물렀어요.,,,,,
+2013-game-3,2013,앱·게임,쿠키런 for Kakao,,,,trends/2013/2013-game-3.jpg,IGDB,Cookie Run
+2014-game-1,2014,앱·게임,클래시 오브 클랜,Supercell,,,trends/2014/2014-game-1.jpg,IGDB,Clash of Clans
+2014-game-2,2014,앱·게임,세븐나이츠 for Kakao,CJ넷마블,,,trends/2014/2014-game-2.jpg,IGDB,Seven Knights
+2014-game-3,2014,앱·게임,애니팡2 for Kakao,선데이토즈,,,,,
+2014-tv-1,2014,TV방송,왕가네 식구들,,스포츠경향,https://sports.khan.co.kr/article/201412231702003/,trends/2014/2014-tv-1.jpg,TMDB,
+2014-tv-2,2014,TV방송,왔다! 장보리,,스포츠경향,https://sports.khan.co.kr/article/201412231702003/,trends/2014/2014-tv-2.jpg,TMDB,
+2014-tv-3,2014,TV방송,개그콘서트,,스포츠경향,https://sports.khan.co.kr/article/201412231702003/,trends/2014/2014-tv-3.jpg,TMDB,
+2014-tv-4,2014,TV방송,정글의 법칙,,스포츠경향,https://sports.khan.co.kr/article/201412231702003/,trends/2014/2014-tv-4.jpg,TMDB,Law of the Jungle
+2014-movie-1,2014,영화,명량,,네이버 영화 순위,,trends/2014/2014-movie-1.jpg,TMDB,
+2014-movie-2,2014,영화,국제시장,,네이버 영화 순위,,trends/2014/2014-movie-2.jpg,TMDB,
+2014-movie-3,2014,영화,겨울왕국,,네이버 영화 순위,,trends/2014/2014-movie-3.jpg,TMDB,
+2014-movie-4,2014,영화,인터스텔라,,네이버 영화 순위,,trends/2014/2014-movie-4.jpg,TMDB,
+2014-movie-5,2014,영화,해적: 바다로 간 산적,,네이버 영화 순위,,trends/2014/2014-movie-5.jpg,TMDB,
+2014-movie-6,2014,영화,수상한 그녀,,네이버 영화 순위,,trends/2014/2014-movie-6.jpg,TMDB,
+2015-movie-1,2015,영화,베테랑,,,,trends/2015/2015-movie-1.jpg,TMDB,
+2015-movie-2,2015,영화,암살,,,,trends/2015/2015-movie-2.jpg,TMDB,
+2015-movie-3,2015,영화,어벤져스: 에이지 오브 울트론,,,,trends/2015/2015-movie-3.jpg,TMDB,
+2015-movie-4,2015,영화,히말라야,,,,trends/2015/2015-movie-4.jpg,TMDB,
+2015-movie-5,2015,영화,내부자들,,,,trends/2015/2015-movie-5.jpg,TMDB,
+2016-movie-1,2016,영화,부산행,,,,trends/2016/2016-movie-1.jpg,TMDB,
+2016-movie-2,2016,영화,검사외전,,,,trends/2016/2016-movie-2.jpg,TMDB,
+2016-movie-3,2016,영화,캡틴 아메리카: 시빌 워,,,,trends/2016/2016-movie-3.jpg,TMDB,
+2016-movie-4,2016,영화,밀정,,,,trends/2016/2016-movie-4.jpg,TMDB,
+2017-movie-1,2017,영화,신과함께-죄와 벌,,,,trends/2017/2017-movie-1.jpg,TMDB,
+2017-movie-2,2017,영화,택시운전사,,,,trends/2017/2017-movie-2.jpg,TMDB,
+2017-movie-3,2017,영화,공조,,,,trends/2017/2017-movie-3.jpg,TMDB,
+2017-movie-4,2017,영화,스파이더맨: 홈커밍,,,,trends/2017/2017-movie-4.jpg,TMDB,
+2017-movie-5,2017,영화,1987,,,,trends/2017/2017-movie-5.jpg,TMDB,
+2017-movie-6,2017,영화,범죄도시,,,,trends/2017/2017-movie-6.jpg,TMDB,
+2018-movie-1,2018,영화,신과함께-인과 연,,,,trends/2018/2018-movie-1.jpg,TMDB,
+2018-movie-2,2018,영화,어벤져스: 인피니티 워,,,,trends/2018/2018-movie-2.jpg,TMDB,
+2018-movie-3,2018,영화,보헤미안 랩소디,,,,trends/2018/2018-movie-3.jpg,TMDB,
+2018-movie-4,2018,영화,미션 임파서블: 폴아웃,,,,trends/2018/2018-movie-4.jpg,TMDB,
+2018-movie-5,2018,영화,쥬라기 월드: 폴른 킹덤,,,,trends/2018/2018-movie-5.jpg,TMDB,
+2019-movie-1,2019,영화,극한직업,,,,trends/2019/2019-movie-1.jpg,TMDB,
+2019-movie-2,2019,영화,어벤져스: 엔드게임,,,,trends/2019/2019-movie-2.jpg,TMDB,
+2019-movie-3,2019,영화,겨울왕국 2,,,,trends/2019/2019-movie-3.jpg,TMDB,
+2019-movie-4,2019,영화,알라딘,,,,trends/2019/2019-movie-4.jpg,TMDB,
+2019-movie-5,2019,영화,기생충,,,,trends/2019/2019-movie-5.jpg,TMDB,
+2019-movie-6,2019,영화,엑시트,,,,trends/2019/2019-movie-6.jpg,TMDB,
+2020-movie-1,2020,영화,남산의 부장들,,,,trends/2020/2020-movie-1.jpg,TMDB,
+2020-movie-2,2020,영화,다만 악에서 구하소서,,,,trends/2020/2020-movie-2.jpg,TMDB,
+2021-movie-1,2021,영화,스파이더맨: 노 웨이 홈,,,,trends/2021/2021-movie-1.jpg,TMDB,
+2022-movie-1,2022,영화,범죄도시2,,,,trends/2022/2022-movie-1.jpg,TMDB,
+2022-movie-2,2022,영화,아바타: 물의 길,,,,trends/2022/2022-movie-2.jpg,TMDB,
+2022-movie-3,2022,영화,탑건: 매버릭,,,,trends/2022/2022-movie-3.jpg,TMDB,
+2022-movie-4,2022,영화,한산: 용의 출현,,,,trends/2022/2022-movie-4.jpg,TMDB,
+2022-movie-5,2022,영화,공조2: 인터내셔날,,,,trends/2022/2022-movie-5.jpg,TMDB,
+2022-movie-6,2022,영화,닥터 스트레인지: 대혼돈의 멀티버스,,,,trends/2022/2022-movie-6.jpg,TMDB,
+2015-tv-1,2015,TV방송,그녀는 예뻤다,,,,trends/2015/2015-tv-1.jpg,TMDB,
+2015-tv-2,2015,TV방송,육룡이 나르샤,,,,trends/2015/2015-tv-2.jpg,TMDB,
+2015-tv-3,2015,TV방송,프로듀사,,,,trends/2015/2015-tv-3.jpg,TMDB,
+2016-tv-1,2016,TV방송,태양의 후예,,,,trends/2016/2016-tv-1.jpg,TMDB,
+2016-tv-2,2016,TV방송,구르미 그린 달빛,,,,trends/2016/2016-tv-2.jpg,TMDB,
+2016-tv-3,2016,TV방송,시그널,,,,trends/2016/2016-tv-3.jpg,TMDB,
+2017-tv-1,2017,TV방송,도깨비,,,,trends/2017/2017-tv-1.jpg,TMDB,쓸쓸하고 찬란하神
+2017-tv-2,2017,TV방송,월계수 양복점 신사들,,,,trends/2017/2017-tv-2.jpg,TMDB,
+2017-tv-3,2017,TV방송,황금빛 내 인생,,,,trends/2017/2017-tv-3.jpg,TMDB,
+2018-tv-1,2018,TV방송,황금빛 내 인생,,,,trends/2018/2018-tv-1.jpg,TMDB,
+2018-tv-2,2018,TV방송,돈꽃,,,,trends/2018/2018-tv-2.jpg,TMDB,
+2018-tv-3,2018,TV방송,미스터 션샤인,,,,trends/2018/2018-tv-3.jpg,TMDB,
+2018-tv-4,2018,TV방송,황후의 품격,,,,trends/2018/2018-tv-4.jpg,TMDB,
+2019-tv-1,2019,TV방송,하나뿐인 내편,,,,trends/2019/2019-tv-1.jpg,TMDB,
+2019-tv-2,2019,TV방송,동백꽃 필 무렵,,,,trends/2019/2019-tv-2.jpg,TMDB,
+2019-tv-3,2019,TV방송,열혈사제,,,,trends/2019/2019-tv-3.jpg,TMDB,
+2019-tv-4,2019,TV방송,어쩌다 발견한 하루,,,,trends/2019/2019-tv-4.jpg,TMDB,
+2020-tv-1,2020,TV방송,부부의 세계,,,,trends/2020/2020-tv-1.jpg,TMDB,
+2020-tv-2,2020,TV방송,펜트하우스,,,,trends/2020/2020-tv-2.jpg,TMDB,
+2020-tv-3,2020,TV방송,낭만닥터 김사부 2,,,,trends/2020/2020-tv-3.jpg,TMDB,낭만닥터 김사부
+2021-tv-1,2021,TV방송,펜트하우스 2,,,,trends/2021/2021-tv-1.jpg,TMDB,펜트하우스
+2021-tv-2,2021,TV방송,철인왕후,,,,trends/2021/2021-tv-2.jpg,TMDB,
+2021-tv-3,2021,TV방송,모범택시,,,,trends/2021/2021-tv-3.jpg,TMDB,
+2022-tv-1,2022,TV방송,재벌집 막내아들,,,,trends/2022/2022-tv-1.jpg,TMDB,
+2022-tv-2,2022,TV방송,천원짜리 변호사,,,,trends/2022/2022-tv-2.jpg,TMDB,
+2022-tv-3,2022,TV방송,이상한 변호사 우영우,,,,trends/2022/2022-tv-3.jpg,TMDB,
+2013-app-1,2013,앱·게임,마인크래프트 포켓 에디션,,구글 한국 블로그,,trends/2013/2013-app-1.jpg,IGDB,Minecraft
+2013-app-2,2013,앱·게임,모두의 게임,,구글 한국 블로그,,,,
+2013-app-3,2013,앱·게임,카카오톡,,구글 한국 블로그,,,,
+2013-app-4,2013,앱·게임,팔라독,,구글 한국 블로그,,trends/2013/2013-app-4.jpg,IGDB,Paladog
+2013-app-5,2013,앱·게임,스왐피,,구글 한국 블로그,,trends/2013/2013-app-5.jpg,IGDB,Where's My Water?
+2014-app-1,2014,앱·게임,와라편의점,,구글 한국 블로그,,,,
+2014-app-2,2014,앱·게임,달과 그림자,,구글 한국 블로그,,,,
+2014-app-3,2014,앱·게임,더 룸 투,,구글 한국 블로그,,trends/2014/2014-app-3.jpg,IGDB,The Room Two
+2014-app-4,2014,앱·게임,헷지 힐링 카카오톡 테마,,구글 한국 블로그,,,,
+2015-app-1,2015,앱·게임,쿠킹마마 요리하자,,구글 한국 블로그,,trends/2015/2015-app-1.jpg,IGDB,Cooking Mama: Let's Cook!
+2015-app-2,2015,앱·게임,EyeEm,EyeEm Mobile,구글 한국 블로그,,,,
+2015-app-3,2015,앱·게임,클래시 오브 클랜,Supercell,구글 한국 블로그,,trends/2015/2015-app-3.jpg,IGDB,Clash of Clans
+2015-app-4,2015,앱·게임,내꿈은 정규직,,구글 한국 블로그,,,,
+2016-app-1,2016,앱·게임,로드 모바일,IGG.COM,구글 한국 블로그,,trends/2016/2016-app-1.jpg,IGDB,Lords Mobile
+2016-app-2,2016,앱·게임,메이플스토리M,넥슨,구글 한국 블로그,,trends/2016/2016-app-2.jpg,IGDB,MapleStory M
+2016-app-3,2016,앱·게임,slither.io,Lowtech Studios,구글 한국 블로그,,trends/2016/2016-app-3.jpg,IGDB,slither.io
+2016-app-4,2016,앱·게임,롤링스카이,,구글 한국 블로그,,trends/2016/2016-app-4.jpg,IGDB,Rolling Sky
+2017-app-1,2017,앱·게임,Foodie 푸디,,구글 한국 블로그,,,,
+2017-app-2,2017,앱·게임,카카오뱅크,,구글 한국 블로그,,,,
+2017-app-3,2017,앱·게임,30일 안에 체중감량,,구글 한국 블로그,,,,
+2018-app-1,2018,앱·게임,배틀그라운드 모바일,,구글 한국 블로그,,trends/2018/2018-app-1.jpg,IGDB,PUBG Mobile
+2018-app-2,2018,앱·게임,검은사막 모바일,,구글 한국 블로그,,trends/2018/2018-app-2.jpg,IGDB,Black Desert Mobile
+2018-app-3,2018,앱·게임,오늘의집,,구글 한국 블로그,,,,
+2018-app-4,2018,앱·게임,틱톡,,구글 한국 블로그,,,,
+2018-app-5,2018,앱·게임,헬로우봇,,구글 한국 블로그,,,,
+2018-app-6,2018,앱·게임,홈 워크아웃,,구글 한국 블로그,,,,
+2019-app-1,2019,앱·게임,당근마켓,,구글 한국 블로그,,,,
+2019-app-2,2019,앱·게임,브롤스타즈,,구글 한국 블로그,,trends/2019/2019-app-2.jpg,IGDB,Brawl Stars
+2019-app-3,2019,앱·게임,블레이드 앤 소울 레볼루션,,구글 한국 블로그,,trends/2019/2019-app-3.jpg,IGDB,Blade & Soul Revolution
+2019-app-4,2019,앱·게임,라이프애프터,,구글 한국 블로그,,trends/2019/2019-app-4.jpg,IGDB,LifeAfter
+2019-app-5,2019,앱·게임,궁수의 전설,,구글 한국 블로그,,trends/2019/2019-app-5.jpg,IGDB,Archero
+2020-app-1,2020,앱·게임,쿠팡이츠,,구글 한국 블로그,,,,
+2020-app-2,2020,앱·게임,썸원,,구글 한국 블로그,,,,
+2020-app-3,2020,앱·게임,카트라이더 러쉬플러스,,구글 한국 블로그,,trends/2020/2020-app-3.jpg,IGDB,KartRider Rush+
+2020-app-4,2020,앱·게임,애니팡4,,구글 한국 블로그,,,,
+2020-app-5,2020,앱·게임,원신,,구글 한국 블로그,,trends/2020/2020-app-5.jpg,IGDB,Genshin Impact
+2021-app-1,2021,앱·게임,밀리의 서재,,구글 한국 블로그,,,,
+2021-app-2,2021,앱·게임,쿠키런: 킹덤,,구글 한국 블로그,,trends/2021/2021-app-2.jpg,IGDB,Cookie Run: Kingdom
+2021-app-3,2021,앱·게임,클로바노트,,구글 한국 블로그,,,,
+2021-app-4,2021,앱·게임,앙상블스타즈,,구글 한국 블로그,,trends/2021/2021-app-4.jpg,IGDB,Ensemble Stars!! Music
+2022-app-1,2022,앱·게임,디즈니플러스,,구글 한국 블로그,,,,
+2022-app-2,2022,앱·게임,던전앤파이터 모바일,,구글 한국 블로그,,trends/2022/2022-app-2.jpg,IGDB,Dungeon & Fighter Mobile
+2022-app-3,2022,앱·게임,머지쿵야 아일랜드,,구글 한국 블로그,,,,
+2022-app-4,2022,앱·게임,리니지W,,구글 한국 블로그,,trends/2022/2022-app-4.jpg,IGDB,Lineage W
+2013-song-1,2013,노래,자니 (Feat. Dynamic Duo),프라이머리 · 자니,,,trends/2013/2013-song-1.jpg,Apple Music,자니 프라이머리
+2013-song-2,2013,노래,눈물 (Feat. 유진 of 더 씨야),리쌍 · 이단옆차기 프로젝트 Vol.02,,,trends/2013/2013-song-2.jpg,Apple Music,눈물 리쌍
+2013-song-3,2013,노래,NoNoNo,Apink · Secret Garden,,,trends/2013/2013-song-3.jpg,Apple Music,NoNoNo Apink
+2014-song-1,2014,노래,썸 (Feat. 릴보이 of 긱스),"소유, 정기고 · 썸",,,trends/2014/2014-song-1.jpg,Apple Music,썸 소유 정기고
+2014-song-2,2014,노래,야생화,박효신 · 야생화,,,trends/2014/2014-song-2.jpg,Apple Music,야생화 박효신
+2014-song-3,2014,노래,"눈, 코, 입",태양 · RISE,,,trends/2014/2014-song-3.jpg,Apple Music,"눈, 코, 입 태양"
+2015-song-1,2015,노래,뱅뱅뱅 (BANG BANG BANG),BIGBANG · A,,,trends/2015/2015-song-1.jpg,Apple Music,BANG BANG BANG BIGBANG
+2015-song-2,2015,노래,같은 시간 속의 너,나얼 · 브라운 아이드 소울 싱글,,,trends/2015/2015-song-2.jpg,Apple Music,같은 시간 속의 너 나얼
+2015-song-3,2015,노래,꺼내 먹어요,Zion.T · Eat,,,trends/2015/2015-song-3.jpg,Apple Music,꺼내 먹어요 Zion.T
+2016-song-1,2016,노래,CHEER UP,TWICE · PAGE TWO,,,trends/2016/2016-song-1.jpg,Apple Music,CHEER UP TWICE
+2016-song-2,2016,노래,시간을 달려서 (Rough),여자친구 (GFRIEND) · 여자친구 3rd Mini Album 'SNOWFLAKE',,,trends/2016/2016-song-2.jpg,Apple Music,시간을 달려서 여자친구
+2016-song-3,2016,노래,어디에도,엠씨더맥스 · pathos,,,trends/2016/2016-song-3.jpg,Apple Music,어디에도 엠씨더맥스
+2017-song-1,2017,노래,첫눈처럼 너에게 가겠다,에일리 · 도깨비 OST Part 9,,,trends/2017/2017-song-1.jpg,Apple Music,첫눈처럼 너에게 가겠다 에일리
+2017-song-2,2017,노래,밤편지,아이유 · 밤편지,,,trends/2017/2017-song-2.jpg,Apple Music,밤편지 아이유
+2017-song-3,2017,노래,좋니,윤종신 · LISTEN 010 좋니,,,trends/2017/2017-song-3.jpg,Apple Music,좋니 윤종신
+2018-song-1,2018,노래,사랑을 했다 (LOVE SCENARIO),iKON · Return,,,trends/2018/2018-song-1.jpg,Apple Music,사랑을 했다 iKON
+2018-song-2,2018,노래,그날처럼,장덕철 · 그날처럼,,,trends/2018/2018-song-2.jpg,Apple Music,그날처럼 장덕철
+2018-song-3,2018,노래,"모든 날, 모든 순간 (Every day, Every Moment)",폴킴 · 키스 먼저 할까요? OST Part 3,,,trends/2018/2018-song-3.jpg,Apple Music,"모든 날, 모든 순간 폴킴"
+2019-song-1,2019,노래,사랑에 연습이 있었다면 (Prod. 2soo),임재현 · 사랑에 연습이 있었다면,,,trends/2019/2019-song-1.jpg,Apple Music,사랑에 연습이 있었다면 임재현
+2019-song-2,2019,노래,그때가 좋았어,케이시 (Kassy) · 그때가 좋았어,,,trends/2019/2019-song-2.jpg,Apple Music,그때가 좋았어 케이시
+2019-song-3,2019,노래,작은 것들을 위한 시 (Boy With Luv) (Feat. Halsey),방탄소년단 · MAP OF THE SOUL : PERSONA,,,trends/2019/2019-song-3.jpg,Apple Music,Boy With Luv 방탄소년단
+2020-song-1,2020,노래,아무노래,지코 (ZICO) · 아무노래,,,trends/2020/2020-song-1.jpg,Apple Music,아무노래 ZICO
+2020-song-2,2020,노래,METEOR,창모 (CHANGMO) · Boyhood,,,trends/2020/2020-song-2.jpg,Apple Music,METEOR 창모
+2020-song-3,2020,노래,아로하,조정석 · 슬기로운 의사생활 OST Part 3,,,trends/2020/2020-song-3.jpg,Apple Music,아로하 조정석
+2021-song-1,2021,노래,Celebrity,아이유 · IU 5th Album 'LILAC',,,trends/2021/2021-song-1.jpg,Apple Music,Celebrity 아이유
+2021-song-2,2021,노래,롤린 (Rollin'),브레이브걸스 · Rollin',,,trends/2021/2021-song-2.jpg,Apple Music,롤린 브레이브걸스
+2021-song-3,2021,노래,Dynamite,방탄소년단 · Dynamite (DayTime Version),,,trends/2021/2021-song-3.jpg,Apple Music,Dynamite BTS
+2022-song-1,2022,노래,LOVE DIVE,IVE (아이브) · LOVE DIVE,,,trends/2022/2022-song-1.jpg,Apple Music,LOVE DIVE IVE
+2022-song-2,2022,노래,TOMBOY,(여자)아이들 · I NEVER DIE,,,trends/2022/2022-song-2.jpg,Apple Music,TOMBOY 여자 아이들
+2022-song-3,2022,노래,취중고백,김민석 (멜로망스) · 취중고백,,,,,Drunken Confession Kim Min Seok
+2013-play-1,2013,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2014-play-1,2014,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2015-play-1,2015,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2016-play-1,2016,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2017-play-1,2017,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2018-play-1,2018,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2019-play-1,2019,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2020-play-1,2020,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2021-play-1,2021,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2022-play-1,2022,놀이,아나바다,학교에서 열린 아나바다 장터로 기억에 남는 활동이에요.,,,trends/play/play-anabada.jpeg,,
+2013-play-2,2013,놀이,고무딱지,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-rubber-ddakji.jpeg,,
+2014-play-2,2014,놀이,고무딱지,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-rubber-ddakji.jpeg,,
+2015-play-2,2015,놀이,고무딱지,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-rubber-ddakji.jpeg,,
+2016-play-2,2016,놀이,고무딱지,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-rubber-ddakji.jpeg,,
+2016-play-4,2016,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji-2.jpeg,,
+2013-play-3,2013,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji.jpeg,,
+2014-play-3,2014,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji-2.jpeg,,
+2015-play-3,2015,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji.jpeg,,
+2017-play-4,2017,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji.jpeg,,
+2018-play-4,2018,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji-2.jpeg,,
+2019-play-4,2019,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji.jpeg,,
+2020-play-4,2020,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji-2.jpeg,,
+2021-play-4,2021,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji.jpeg,,
+2022-play-4,2022,놀이,종이딱지,종이를 접어 만든 딱지를 부딪히며 놀던 추억이에요.,,,trends/play/play-paper-ddakji-2.jpeg,,
+2016-play-3,2016,놀이,가게놀이,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-shop.jpeg,,
+2017-play-3,2017,놀이,가게놀이,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-shop.jpeg,,
+2018-play-3,2018,놀이,가게놀이,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-shop.jpeg,,
+2019-play-3,2019,놀이,가게놀이,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-shop.jpeg,,
+2020-play-3,2020,놀이,가게놀이,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-shop.jpeg,,
+2021-play-3,2021,놀이,가게놀이,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-shop.jpeg,,
+2022-play-3,2022,놀이,가게놀이,동생 세대에서 유행해 함께 기억에 남는 놀이예요.,,,trends/play/play-shop.jpeg,,
+2013-snack-1,2013,간식,컵밥,노량진·학원가에서 시작된 컵밥 열풍,,,trends/2013/2013-snack-1.jpg,네이버 블로그 (CCL),
+2013-snack-2,2013,간식,콜팝,학교 앞 문방구·분식집의 스테디셀러,,,trends/2013/2013-snack-2.jpg,네이버 블로그 (CCL),
+2013-snack-3,2013,간식,피카츄 돈까스,학교 앞 문방구·분식집의 스테디셀러,,,trends/2013/2013-snack-3.jpg,네이버 블로그 (CCL),
+2014-snack-1,2014,간식,허니버터칩,하반기 허니버터칩 품절 대란,,,trends/2014/2014-snack-1.jpg,네이버 블로그 (CCL),
+2014-snack-2,2014,간식,벌집 아이스크림,홍대·강남·부평 등 번화가에서 유행,,,trends/2014/2014-snack-2.jpg,네이버 블로그 (CCL),
+2015-snack-1,2015,간식,죠스·국대떡볶이,프랜차이즈 떡볶이 전성기,,,trends/2015/2015-snack-1.jpg,네이버 블로그 (CCL),
+2015-snack-2,2015,간식,불닭볶음면,매운 볶음면 챌린지 확산,,,trends/2015/2015-snack-2.jpg,네이버 블로그 (CCL),
+2016-snack-1,2016,간식,명랑핫도그,"1,000원대 가성비 쌀핫도그, 전국 학원가·번화가 점령",,,trends/2016/2016-snack-1.jpg,네이버 블로그 (CCL),
+2016-snack-2,2016,간식,대왕카스테라,,,,trends/2016/2016-snack-2.jpg,네이버 블로그 (CCL),
+2017-snack-1,2017,간식,모짜렐라 치즈핫도그,치즈가 늘어나는 핫도그의 전성기,,,trends/2017/2017-snack-1.jpg,네이버 블로그 (CCL),
+2017-snack-2,2017,간식,생과일주스 (쥬씨),1L 대용량 저가 생과일주스,,,trends/2017/2017-snack-2.jpg,네이버 블로그 (CCL),
+2018-snack-1,2018,간식,뚱카롱,필링이 두꺼운 한국식 마카롱 열풍,,,trends/2018/2018-snack-1.jpg,네이버 블로그 (CCL),
+2018-snack-2,2018,간식,흑당버블티,대만 흑당 밀크티 상륙,,,trends/2018/2018-snack-2.jpg,네이버 블로그 (CCL),
+2019-snack-1,2019,간식,흑당버블티,타이거슈가·공차 등 흑당 열풍,,,trends/2019/2019-snack-1.jpg,네이버 블로그 (CCL),
+2019-snack-2,2019,간식,마라탕,10대 소울푸드로 자리 잡은 마라탕,,,trends/2019/2019-snack-2.jpg,네이버 블로그 (CCL),
+2019-snack-3,2019,간식,꿔바로우,마라탕과 함께 유행,,,trends/2019/2019-snack-3.jpg,네이버 블로그 (CCL),
+2020-snack-1,2020,간식,달고나 커피,코로나19 거리두기 속 홈카페 유행,,,trends/2020/2020-snack-1.jpg,네이버 블로그 (CCL),
+2020-snack-2,2020,간식,크로플,카페 크로플 유행 시작,,,trends/2020/2020-snack-2.jpg,네이버 블로그 (CCL),
+2021-snack-1,2021,간식,로제떡볶이,배떡 등을 중심으로 한 꾸덕한 로제떡볶이 대유행,,,trends/2021/2021-snack-1.jpg,네이버 블로그 (CCL),
+2021-snack-2,2021,간식,민트초코 디저트,,,,trends/2021/2021-snack-2.jpg,네이버 블로그 (CCL),
+2022-snack-1,2022,간식,포켓몬빵 (재출시),띠부띠부실 수집 품절 대란,,,trends/2022/2022-snack-1.jpg,네이버 블로그 (CCL),
+2022-snack-2,2022,간식,탕후루,하반기부터 번화가 중심으로 가게 증가,,,trends/2022/2022-snack-2.jpg,네이버 블로그 (CCL),

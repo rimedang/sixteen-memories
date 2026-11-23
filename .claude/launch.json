@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {"name": "app", "runtimeExecutable": ".venv/Scripts/python.exe", "runtimeArgs": ["app.py"], "port": 5000},
+    {"name": "demo-test-data", "runtimeExecutable": ".venv/Scripts/python.exe", "runtimeArgs": ["C:/Users/arim0/AppData/Local/Temp/claude/c26c470da93b117f/59edb16e-af5e-462e-9ab2-ef2551331c1c/scratchpad/demo_server.py"], "port": 5001}
+  ]
+}

@@ -1,0 +1,6 @@
+memory_id,year,image_file,image_source
+mem-a,2015,memories/test-a-2015.jpg,테스트 캡처
+mem-a,2017,memories/test-a-2017.jpg,테스트 캡처
+없는추억,2015,memories/x.jpg,
+mem-a,2030,memories/y.jpg,
+mem-g,2017,memories/test-g-2017.jpg,테스트 사진

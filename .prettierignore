@@ -1,0 +1,2 @@
+# Jinja 템플릿은 HTML 자동 정렬 시 {% if a == b %} 문법이 깨지므로 제외
+templates/

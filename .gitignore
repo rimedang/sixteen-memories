@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+instance/
+*.pyc
+
+# API 키 (GitHub에 올리지 않음)
+.env
+
+# 조사용 원본 사진 폴더 (지금은 비어 있어 없음). 화면에 쓰는 사진은 static/images/에 있음
+DEMO_images/

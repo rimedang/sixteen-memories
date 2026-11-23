@@ -1,0 +1,5 @@
+id,year,category,title,description,source_title,source_url,image_file,image_source
+t-2016-1,2016,영화,[테스트] 2016 영화,테스트 유행,테스트 출처,https://example.com/t1,trends/t-2016-1.jpg,TMDB
+t-2016-2,2016,노래,[테스트] 2016 노래,,,,,
+t-2020-1,2020,TV방송,[테스트] 2020 TV방송,테스트 유행,테스트 출처,https://example.com/t3,,
+bad-t,2016,음식,[테스트] 잘못된 카테고리,거부되어야 함,테스트 출처,https://example.com/t4,,

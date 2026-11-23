@@ -1,0 +1,131 @@
+{% extends "base.html" %} {% block content %}
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Back to sixteen</span>
+      <h1>열여섯 살의 우리 동네,<br /><em>다시 걸어볼까요?</em></h1>
+      <p class="hero-lead">
+        16살 때 살던 동네와 출생연도만 입력하면, 그 해 동네의 모습과 전국 유행을 한 화면에 모아 보여드려요. 마음에 남는
+        추억에는 소감을 남기고, 친구에게 링크로 공유해 보세요.
+      </p>
+      <div class="hero-stats">
+        <div><strong>{{ regions | length }}개 구</strong><span>서울·인천</span></div>
+        <div><strong>2013–2022</strong><span>탐색 연도</span></div>
+        <div><strong>간식·노래·영화·TV·앱·놀이</strong><span>전국 유행</span></div>
+      </div>
+    </div>
+
+    <div class="card search-card">
+      <h2>내 열여섯 살 찾기</h2>
+      <p>입력한 출생연도에 16을 더한 해의 자료를 보여드려요.</p>
+
+      {% if error %}
+      <p class="message error" role="alert">{{ error }}</p>
+      {% endif %}
+
+      <form class="search-form" action="{{ url_for('search') }}" method="get">
+        <div class="field">
+          <label for="region"><span class="step-num">1</span>16살 때 살던 동네</label>
+          {#- 입력하면 지원 지역 중 맞는 곳을 아래에 추천한다 (static/search.js). 목록에 없는 동네도 그대로 입력할 수 있다. -#}
+          <div class="combo">
+            <input id="region" name="region" type="text" autocomplete="off" spellcheck="false"
+                   maxlength="{{ max_place }}" placeholder="예: 인천 부평구" value="{{ selected_region }}"
+                   role="combobox" aria-autocomplete="list" aria-expanded="false"
+                   aria-controls="region-suggestions" aria-describedby="region-hint">
+            <ul id="region-suggestions" class="suggestions" role="listbox" aria-label="추천 동네" hidden></ul>
+          </div>
+          <span class="field-hint" id="region-hint">서울·인천 {{ regions | length }}개 구를 지원해요. 다른 동네를 입력하면 그해 전국 유행을 보여드려요.</span>
+        </div>
+
+        <div class="field">
+          <label for="birth_year"><span class="step-num">2</span>출생연도</label>
+          <input
+            id="birth_year"
+            name="birth_year"
+            type="text"
+            inputmode="numeric"
+            maxlength="4"
+            placeholder="예: 2004"
+            value="{{ birth_year }}"
+          />
+          <span class="field-hint">1997년생부터 2006년생까지 이용할 수 있어요.</span>
+        </div>
+
+        <button type="submit">16살의 우리 동네 보기</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>세 단계로 떠나는 열여섯 살</h2>
+    </div>
+    <div class="steps">
+      <article class="card step">
+        <span class="num">01</span>
+        <h3>그때 우리 동네</h3>
+        <p>그 해 우리 구의 먹거리, 놀거리, 자주 가던 장소를 보여드려요.</p>
+      </article>
+      <article class="card step">
+        <span class="num">02</span>
+        <h3>그해 전국 유행</h3>
+        <p>그 해 즐겨 먹던 간식과 노래, 영화, TV방송, 앱·게임, 놀이를 함께 살펴봐요.</p>
+      </article>
+      <article class="card step">
+        <span class="num">03</span>
+        <h3>소감 나누기</h3>
+        <p>추억마다 소감을 남기고, 결과 링크를 친구에게 보내 같이 이야기해요.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0">
+  <div class="wrap">
+    <div class="trust">
+      <div>
+        <span class="eyebrow">Trusted sources</span>
+        <h2>이렇게 골랐어요</h2>
+      </div>
+      <ul class="trust-list">
+        <li>
+          <strong>블로그 언급 분석 + 기사 확인으로 선정</strong>
+          <span>여러 블로거가 반복해서 언급한 장소를 후보로 뽑고, 기사로 다시 확인해 골랐어요.</span>
+        </li>
+        <li>
+          <strong>통계로 고른 지원 지역</strong>
+          <span>행정안전부 주민등록 인구통계에서 2016년 12월 15~19세 거주자가 많은 구를 골랐어요.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="regions" style="padding-top: 0">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Regions</span>
+      <h2>지원 지역</h2>
+      <p>목록에 없는 지역은 차근차근 추가할 예정이에요.</p>
+    </div>
+    <div class="region-groups">
+      {% for sido in regions | map(attribute='sido') | unique %} {% set items = regions | selectattr('sido', 'equalto',
+      sido) | list %}
+      <div class="card region-group">
+        <h3>{{ sido }}<span>{{ items | length }}곳</span></h3>
+        <div class="chips">{% for r in items %}<span class="chip">{{ r.gu }}</span>{% endfor %}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+{#- 자동완성에 쓸 지원 지역 목록. tojson은 <, > 등을 이스케이프해 안전하게 넣어 준다. -#}
+<script type="application/json" id="region-data">{{ regions | tojson }}</script>
+<script src="{{ url_for('static', filename='search.js') }}"></script>
+{% endblock %}

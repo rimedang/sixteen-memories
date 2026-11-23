@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% set place_name = region.gu if region else place %}
+
+{% block title %}{{ year }}년 {{ place_name }} · 열여섯, 우리 동네{% endblock %}
+
+{#- 소감 입력 폼: 추억 소감 창(dialog)과 연도별 이야기에서 함께 쓴다. -#}
+{% macro comment_form(placeholder) %}
+  <form class="comment-form">
+    <input name="nickname" type="text" placeholder="닉네임" maxlength="{{ max_nickname }}" aria-label="닉네임">
+    <textarea name="content" rows="3" placeholder="{{ placeholder }} ({{ max_content }}자 이내)"
+              maxlength="{{ max_content }}" aria-label="내용"></textarea>
+    <div class="comment-actions">
+      <span class="char-count">0 / {{ max_content }}</span>
+      <button type="submit">남기기</button>
+    </div>
+    <p class="form-error" role="alert"></p>
+  </form>
+{% endmacro %}
+
+{% block content %}
+<section class="result-hero">
+  <div class="result-hero-inner">
+    <div>
+      {% if region %}
+      <p class="result-region">{{ region.sido }} {{ region.gu }}</p>
+      {% else %}
+      <p class="result-region">{{ place }} <span class="unsupported-chip">준비 중인 동네</span></p>
+      {% endif %}
+      <h1 class="result-year">{{ year }}</h1>
+      <p class="result-sub">{{ year }}년, 지금으로부터 {{ years_ago }}년 전 <span class="years-ago-chip">열여섯 살의 해</span></p>
+      <nav class="year-nav" aria-label="다른 연도로 이동">
+        {% if prev_year %}
+        <a class="year-nav-link" href="{{ url_for('result', region=region_key, year=prev_year) }}">‹ {{ prev_year }}년</a>
+        {% endif %}
+        {% if next_year %}
+        <a class="year-nav-link" href="{{ url_for('result', region=region_key, year=next_year) }}">{{ next_year }}년 ›</a>
+        {% endif %}
+      </nav>
+    </div>
+    <div class="share">
+      <button type="button" id="copy-link">결과 링크 복사</button>
+      <span id="copy-status" class="copy-status" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap result-body">
+  <section class="result-section">
+    <div class="section-head">
+      <span class="eyebrow">Local memories</span>
+      <h2>그때 {{ place_name }}</h2>
+    </div>
+
+    {% if not region %}
+    {#- 미지원 동네: 멈추거나 임의의 결과를 보여주지 않고 안내한다 (계획서 문제 해결 절차) -#}
+    <div class="card unsupported">
+      <p class="unsupported-title" role="status">{{ unsupported_message }}</p>
+      <p>대신 아래에서 {{ year }}년 전국 유행을 보고, 그해 열여섯이었던 사람들과 이야기를 나눌 수 있어요.</p>
+      <p class="unsupported-sub">지금 지원하는 동네로 보기</p>
+      <div class="chips">
+        {% for r in regions %}
+        <a class="chip" href="{{ url_for('result', region=r.id, year=year) }}">{{ r.sido[:2] }} {{ r.gu }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% elif memories %}
+    <div class="memory-list">
+      {% for m in memories %}
+      <article class="card memory-card {% if m.images %}has-image{% endif %}"
+               data-memory-id="{{ m.id }}" data-title="{{ m.title }}"
+               data-comments-url="{{ url_for('list_comments', memory_id=m.id) }}">
+        {% if m.images | length > 1 %}
+        {#- 사진이 여러 장인 추억: 모두 함께 보여준다 -#}
+        <figure class="photo-gallery photo-gallery--{{ m.images | length if m.images | length <= 3 else 'many' }}">
+          {% for image in m.images %}
+          <img class="gallery-photo" src="{{ url_for('static', filename='images/' ~ image) }}"
+               alt="{{ m.title }} 사진 {{ loop.index }}" loading="lazy">
+          {% endfor %}
+          {% if m.image_source %}
+          <figcaption>사진: {{ m.image_source }}{% if m.image_license %} · {{ m.image_license }}{% endif %}</figcaption>
+          {% endif %}
+        </figure>
+        {% elif m.image_file %}
+        <figure>
+          <img class="memory-photo" src="{{ url_for('static', filename='images/' ~ m.image_file) }}"
+               alt="{{ m.title }}{% if m.photo_year %} {{ m.photo_year }}년 모습{% endif %}" loading="lazy">
+          {% if m.photo_year %}<span class="photo-year">{{ m.photo_year }}년 모습</span>{% endif %}
+
+          {#- 연도별 사진이 2장 이상이면, 결과 연도를 바꾸지 않고 카드 안에서 넘겨 본다. -#}
+          {% if m.photos | length > 1 %}
+          <div class="photo-timeline" role="group" aria-label="{{ m.title }} 연도별 사진">
+            {% for p in m.photos %}
+            <button type="button" class="photo-year-button {% if p.year == m.photo_year %}is-active{% endif %}"
+                    aria-pressed="{{ 'true' if p.year == m.photo_year else 'false' }}"
+                    data-src="{{ url_for('static', filename='images/' ~ p.image_file) }}"
+                    data-year="{{ p.year }}">{{ p.year }}</button>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if m.image_source %}
+          <figcaption>사진: {{ m.image_source }}{% if m.image_license %} · {{ m.image_license }}{% endif %}</figcaption>
+          {% endif %}
+        </figure>
+        {% endif %}
+        <div class="memory-content">
+          <div class="meta">
+            <span class="badge">{{ m.category }}</span>
+          </div>
+          <h3>{{ m.title }}</h3>
+          {% if m.description %}<p>{{ m.description }}</p>{% endif %}
+          {% if m.source_url %}
+          <p class="source"><a href="{{ m.source_url }}" target="_blank" rel="noopener noreferrer">관련 글 보기{% if m.source_title %} · {{ m.source_title }}{% endif %}</a></p>
+          {% endif %}
+
+          {#- 남겨진 소감이 있으면 최근 소감을 바로 보여준다. Jinja가 자동으로 이스케이프한다. -#}
+          <ul class="comment-preview" {% if not m.comment_count %}hidden{% endif %}>
+            {% for c in m.recent_comments %}
+            <li><strong>{{ c.nickname }}</strong><p>{{ c.content }}</p></li>
+            {% endfor %}
+          </ul>
+          <button type="button" class="open-comments" aria-haspopup="dialog">
+            소감 보기·남기기<span class="comment-count">{% if m.comment_count %} ({{ m.comment_count }}){% endif %}</span>
+          </button>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="message">아직 {{ region.gu }}의 {{ year }}년 추억 자료를 준비하고 있어요.</p>
+    {% endif %}
+  </section>
+
+  <section class="result-section">
+    <div class="section-head">
+      <span class="eyebrow">Nationwide trends</span>
+      <h2>{{ year }}년 전국 유행</h2>
+    </div>
+
+    {% set has_trend = trends_by_category.values() | select | list %}
+    {% if has_trend %}
+    {#- 분류별 영문 소제목과 포인트 색 (style.css의 .trend-column--색이름) -#}
+    {% set category_style = {
+      '간식': ('Snack', 'orange'), '노래': ('Music', 'violet'), '영화': ('Movie', 'red'),
+      'TV방송': ('TV', 'sky'), '앱·게임': ('App · Game', 'green'), '놀이': ('Play', 'amber')
+    } %}
+    <div class="trend-columns">
+      {% for category, items in trends_by_category.items() %}
+      {% set label, color = category_style.get(category, ('', 'violet')) %}
+      <div class="trend-column trend-column--{{ color }}">
+        <div class="trend-column-head">
+          <span class="trend-dot" aria-hidden="true"></span>
+          <div>
+            <span class="trend-label">{{ label }}</span>
+            <h3>{{ category }}</h3>
+          </div>
+          <span class="trend-count">{{ items | length }}</span>
+        </div>
+        {% for t in items %}
+        {% set is_square = category in ['노래', '간식'] %}
+        <article class="card trend-card {% if t.image_file %}has-poster{% endif %} {% if is_square %}is-square{% endif %}">
+          {% if t.image_file %}
+          <img class="poster" src="{{ url_for('static', filename='images/' ~ t.image_file) }}"
+               alt="{{ t.title }} {{ '앨범 커버' if category == '노래' else ('사진' if category == '간식' else '포스터') }}" loading="lazy">
+          {% endif %}
+          <div>
+            <h4>{{ t.title }}</h4>
+            {% if t.description %}<p>{{ t.description }}</p>{% endif %}
+            {% if t.source_url %}
+            <p class="source"><a href="{{ t.source_url }}" target="_blank" rel="noopener noreferrer">관련 글 보기{% if t.source_title %} · {{ t.source_title }}{% endif %}</a></p>
+            {% endif %}
+            {% if t.image_source %}<p class="image-credit">이미지: {{ t.image_source }}</p>{% endif %}
+          </div>
+        </article>
+        {% else %}
+        <p class="trend-empty">준비 중이에요</p>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="message">{{ year }}년 전국 유행 자료를 준비하고 있어요.</p>
+    {% endif %}
+
+    {#- 지역과 상관없이 그 해를 함께 보낸 사람들이 이야기하는 공통 공간 -#}
+    <div class="card year-board" data-comments-url="{{ url_for('list_year_comments', year=year) }}">
+      <div class="year-board-head">
+        <span class="eyebrow">Talk</span>
+        <h3>{{ year }}년 이야기 나누기</h3>
+        <p>어느 동네에 살았든, {{ year }}년에 열여섯이었던 사람들과 그때 유행을 이야기해요.</p>
+      </div>
+      <ul class="comment-list"></ul>
+      {{ comment_form(year ~ "년에 유행했던 것에 대한 기억을 남겨 주세요") }}
+    </div>
+  </section>
+
+  <div class="back-row">
+    <a class="btn btn-ghost" href="{{ url_for('index') }}">다른 동네·연도 보기</a>
+  </div>
+</div>
+
+{#- 추억 소감 창: '소감 보기·남기기'를 누르면 화면 위에 열리고, 뒤의 결과 화면은 그대로 둔다. -#}
+<dialog id="comment-dialog" class="comment-dialog" aria-labelledby="comment-dialog-title">
+  <div class="dialog-head">
+    <div>
+      <span class="eyebrow">소감</span>
+      <h3 id="comment-dialog-title"></h3>
+    </div>
+    <button type="button" class="dialog-close" aria-label="소감 창 닫기">×</button>
+  </div>
+  <ul class="comment-list"></ul>
+  {{ comment_form("이 추억에 대한 소감을 남겨 주세요") }}
+</dialog>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+{% endblock %}
